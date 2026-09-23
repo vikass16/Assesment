@@ -1,0 +1,67 @@
+
+Why we need Java 8 features
+1. Concise and Minimal code
+2. Functional Programming was missing in benefit of OOPs nature.
+3. To enable parallel Programming, More compatible code for multiple processor
+
+
+Feature of Java 8
+1. Lambda Expression - Lambda Expression are similar to the method, but they don't need a name they can be implemented right in the body of a method.
+   (x,y) -> x+y
+2. Stream API - Java Stream API for bulk Data Operation On Collections.
+3. Date and Time API 
+4. Base64 Encode and Decode
+5. Method reference and constructor reference (:: operator)
+6. public static method in Interface
+7. Functional Interface - It is an Interface which has Exactly one abstract method to designate an interface as a Functional Interface, we don't need to use the @FunctionalInterface annotation.
+8. Optional class
+
+
+1. Lambda Expression 
+   -Lambda Expression is an anonymous function.
+    1. Not having any name
+    2. Not having any return type
+    3. Not having modifier
+     
+  - Steps to make any function as lambda expression
+    1. Remove Modifier
+    2. Remove return type
+    3. Remove method name
+    4. Place Arrow
+     
+  - Characteristics / Properties of lambda Expression
+    1. if body has just one statement then we can remove curly brackets {}.
+    2. Use type inference, compiler guess the situation or context.
+       private void add(int a, int b){
+         System.out.println(a+b);
+       }
+    Converted to
+       (int a, int b) -> { System.out.println(a+b);}
+    Converted to (By Compiler)
+       (a,b) -> { System.out.println(a+b);} // Here Compiler will automatically understand that the arguments are of int type So we don't need to Explicitly Specify.
+    3. No Return keyword
+       private int getStringlength(String str){
+         return str.length();
+       }
+    Converted to
+       (String str) -> {return str.length();}
+    Converted to
+       (str) -> str.length();
+    4. If only one param remove small brackets
+       (str) -> str.length();
+    Converted to 
+        str -> str.length();
+   
+  - Benefits of Lambda Expression
+    1. To enable functional programming in java
+    2. To make code more readable, maintainable and concise code
+    3. To enable parallel processing
+    4. JAR file size reduction
+    5. Elimination of shadow variables
+
+2. Functional Interface
+   - Interface having exactly single abstract method but can have any number of defaults and static methods. We can invoke lambda expression by using functional interface.
+
+   - Advantages of the Interface to be a functional annotation
+     1. It restricts the interface to be a Functional Interface
+     2. So if People have already used some lambda expression and show new team member added another abstract method on the Interface all lambda expression will have errors.
