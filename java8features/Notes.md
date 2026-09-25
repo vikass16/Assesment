@@ -65,3 +65,13 @@ Feature of Java 8
    - Advantages of the Interface to be a functional annotation
      1. It restricts the interface to be a Functional Interface
      2. So if People have already used some lambda expression and show new team member added another abstract method on the Interface all lambda expression will have errors.
+   - A functional Interface can have a child interface they both can have Same abstract method but not different abstract method.
+   
+ Default method in Interface
+   - Till Java 1.7 only public abstract can be defined in Interface but After Java 8 we can have concrete method inside Interface as well.
+   - Similarly public static final variable are allowed.
+ static method in Interface
+   - static method in Interface is defined with 'static' keyword.
+   - static method contains complete definition of the function.
+   - cannot be overridden or changed in the implementation class.
+   - We can also write psvm method insider an Interface.
