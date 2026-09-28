@@ -32,14 +32,21 @@ Feature of Java 8
   - Characteristics / Properties of lambda Expression
     1. if body has just one statement then we can remove curly brackets {}.
     2. Use type inference, compiler guess the situation or context.
+
+
        private void add(int a, int b){
          System.out.println(a+b);
        }
+
     Converted to
        (int a, int b) -> { System.out.println(a+b);}
+
     Converted to (By Compiler)
        (a,b) -> { System.out.println(a+b);} // Here Compiler will automatically understand that the arguments are of int type So we don't need to Explicitly Specify.
+
+
     3. No Return keyword
+
        private int getStringlength(String str){
          return str.length();
        }
@@ -47,7 +54,9 @@ Feature of Java 8
        (String str) -> {return str.length();}
     Converted to
        (str) -> str.length();
+
     4. If only one param remove small brackets
+
        (str) -> str.length();
     Converted to 
         str -> str.length();
@@ -75,3 +84,26 @@ Feature of Java 8
    - static method contains complete definition of the function.
    - cannot be overridden or changed in the implementation class.
    - We can also write psvm method insider an Interface.
+ 
+ Runnable and Comparator are Functional Interface
+ We don't need a Implementation class for a Functional Interface, We can directly use those functional interface in Main class using Lambda Expression.
+ 
+
+********************************************* IMPORTANT *************************************
+
+ 1. We can use directly Lambda Expression (Without class Implementation) for a Functional Interface Because a Functional Interface can have only one Abstract method.
+ 2. And We can have Multiple implementation of a single Abstract method of a functional Interface as well Directly Using Lambda Expression.(We can implement 
+  like this (We have two different Implementation of Same abstract method (getName()) of Employee Interface ).
+
+           Employee employee = () -> "Software Engineer!!";
+           System.out.println(employee.getName());
+
+           Employee editor = () -> "Editor hu bhai..";
+           System.out.println(editor.getName());
+  )
+
+ 3. And for Normal Interface which have more than one Abstract method We have to use Anonymous inner class for that instead of Lambda Expression.
+
+
+  4. For a single Abstract class --> Lambda Expression
+  5. for more than one abstract class --> Anonymous inner class
