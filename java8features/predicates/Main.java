@@ -13,7 +13,6 @@ public class Main {
         Predicate<Integer> predicate = x -> x > 15000; // Here we check that x(number) is greater than 15000
         System.out.println(predicate.test(20000)); // We pass here value of x which is 20000 . So answer will be true.
 
-
         List<Integer> list = List.of(1,2,3,4,5,6,7,8,9,10);
         int sum = list.stream().filter(n -> n%2==0).mapToInt(n->n).sum();
         System.out.println(sum);
