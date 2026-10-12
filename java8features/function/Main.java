@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.function.Function;
 
 
-// Function is an Interface which has only abstract method named 'apply()'
+// Function is an Interface which has only abstract method named 'apply()' , Which does operations
 public class Main {
     public static void main(String[] args) {
         Function<String, Integer> function = x -> x.length();
