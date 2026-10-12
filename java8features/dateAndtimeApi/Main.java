@@ -46,5 +46,21 @@ public class Main {
         //availableZones.forEach(System.out::println);
         ZonedDateTime newYorkTime = ZonedDateTime.now(ZoneId.of("America/New_York"));
         System.out.println(newYorkTime);
+
+
+        // Instant and Duration
+        Instant before = Instant.now();
+        Instant after = Instant.now();
+        Duration duration = Duration.between(before, after);
+        System.out.println(before+" || "+after+" || "+duration);
+
+        // Duration is Used for hours, Minutes, seconds and milliseconds
+        // Period is used for Days, months and Years
+
+        LocalDate currentDate = LocalDate.now();
+        LocalDate dateOf2003 = LocalDate.of(2004,6,9);
+        Period between = Period.between(dateOf2003, currentDate);
+        System.out.println(between);
+
     }
 }
