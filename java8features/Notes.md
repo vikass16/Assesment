@@ -17,7 +17,7 @@ Feature of Java 8
 8. Optional class
 
 
-1. Lambda Expression 
+# Lambda Expression 
    -Lambda Expression is an anonymous function.
     1. Not having any name
     2. Not having any return type
@@ -70,7 +70,7 @@ Feature of Java 8
     4. JAR file size reduction
     5. Elimination of shadow variables
 
-2. Functional Interface
+# Functional Interface
    - Interface having exactly single abstract method but can have any number of defaults and static methods. We can invoke lambda expression by using functional interface.
 
    - Advantages of the Interface to be a functional annotation
@@ -109,3 +109,8 @@ Feature of Java 8
 
   4. For a single Abstract class --> Lambda Expression
   5. for more than one abstract class --> Anonymous inner class
+
+1. Predicate is an Interface which has boolean abstract method works on Conditions [test()]
+2. Function is an Interface which has various methods including one abstract method which is [apply()] use for various operations.
+3. Consumer 
+
