@@ -1,2 +1,7 @@
-package projects.exceptionhandling;public class ContactException {
+package projects.exceptionhandling;
+
+public class ContactException extends Exception{
+    public ContactException(String message){
+        super(message);
+    }
 }
