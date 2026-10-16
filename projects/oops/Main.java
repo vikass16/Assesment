@@ -1,2 +1,2 @@
-package projects.corejava.oops;public class Main {
+package projects.oops;public class Main {
 }

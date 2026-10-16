@@ -18,6 +18,7 @@ Abstract class:
   - can have instance variable and other fields [Partially abstraction]
   - can have constructors
   - A class can Extend only one class
+
 Interface:
   - uses interface keyword
   - can have default, static, private and abstract methods
