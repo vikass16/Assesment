@@ -1,10 +1,10 @@
-package projects.corejava;
+package projects.basicjava;
 
 
 import java.util.Random;
 import java.util.Scanner;
 
-// Guess Number
+// Guess Number game
 public class Main {
     public static void main(String[] args) {
         // Initialization
