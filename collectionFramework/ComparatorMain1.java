@@ -23,9 +23,9 @@ public class ComparatorMain1 {
         System.out.println();
 
         student1s.sort((a,b) -> {
-            if(a.getgpa() - b.getgpa() < 0){
+            if(a.getgpa() - b.getgpa() < 0){   // descending order
                 return 1;
-            }else if(a.getgpa() - b.getgpa() > 0){
+            }else if(a.getgpa() - b.getgpa() > 0){  // ascending order
                 return -1;
             }else {
                 return 0;
