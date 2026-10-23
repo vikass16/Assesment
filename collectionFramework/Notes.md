@@ -72,10 +72,11 @@ It sorts the Map on the basis of Key (according to key : if key is String then i
 NavigationMap is an Interface which extends SortedMap Which is also an Interface.
 TreeMap extends NavigationMap.
 
-  Map  (Interface)
-     --> SortedMap   (Interface)
+  
+    Map  (Interface)
+      --> SortedMap   (Interface)
                  --> NavigableMap  (Interface)
-                                --> TreeMap  (class)
+                               --> TreeMap  (class)
   
 
 -------------------  HashTable ----------------------
