@@ -28,7 +28,7 @@ public class StaticMethodInInterface implements AA{
 
         AA.sayHello(); // like this (even without implementing AA)
 
-        // But we can access default method with object of Main Class
+        // But we can access default method and abstract method with object of Main Class
         st.sayBye();
         st.sayNothing(); // Without this overriding will not work
 
