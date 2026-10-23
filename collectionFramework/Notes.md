@@ -100,12 +100,13 @@ only one thread to access a critical section of code at a time
 6. Compare and swap approach is used (No locking required except in resizing and collision condition).
 
 
-------------------------  Immutable Map  ---------------------------
+-------------------------------  Immutable Map  ----------------------------------------
+
 ImmutableMap is a map which values we can't change once it is instantiated.
 Can not add or remove elements.
 
-Map<String, Integer> map = Map.of("Vikas",78,"Vipin",82,"Atul",89,"Anish",90); // Limited only for 10 key-value pair.
-Map<String, Integer> map = Map.ofEntries(Map.entry("Vikas",78),Map.entry("Vipin",82),Map.entry("Atul",90));  // Using this we can put Unlimited values into ImmutableMap.
+     Map<String, Integer> map = Map.of("Vikas",78,"Vipin",82,"Atul",89,"Anish",90); // Limited only for 10 key-value pair.
+     Map<String, Integer> map = Map.ofEntries(Map.entry("Vikas",78),Map.entry("Vipin",82),Map.entry("Atul",90));  // Using this we can put Unlimited values into ImmutableMap.
 This is a clean way to create an ImmutableMap, Where we can't add or remove values, if try then will get UnSupportedException.
 
 
