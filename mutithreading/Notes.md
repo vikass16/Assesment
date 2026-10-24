@@ -84,6 +84,7 @@ Important Notes
     Synchronization : The coordination of simultaneous processes, threads, 
                       or tasks in an operating system so they execute in a predictable order and share system resources safely.
                       Synchronization is done by locking shared resources.
+    Synchronization is used to avoid race condition and inconsistent data.
 
     Critical Section : A segment of code or part of a program where shared resources (such as global variables, memory, files, or databases) are accessed and modified.
     
@@ -104,3 +105,37 @@ Lock is an Interface. we can create its object by using its Implementation class
                  - The specified waiting time elapses.
     unlock() : it released the lock after that specified time.
     lock() : This applies on thread which is waiting for another thread to release the lock.
+
+
+FEW Important Points
+
+    start() : This method creates new thread and internally calls run().
+    run() : runs as a normal method.
+    sleep() : pause a thread for specific time, it doesn't release lock.
+    join() : it is used to keep a thread in waiting state until target threads completes.
+    yield() : thread.yield() method tells schedular to give chance to another threads as well but it won't guarantee.
+    priority() : thread.setPriority(Thread.MAX_PRIORITY); it is used to give the priority to threads but high priority does not guarantee execution first.
+
+    DeadLock : Deadlock is a condition where process waits infinitly for the reousrces held by each other.
+              It occurs when four condition is satisfied [Mutual Exclusion, Hold and wait, Circular wait, No pre-emption].
+              Deadlock can be prevent by elemenating at least one condition of these.
+
+   
+    Inter-thread Communication :
+        wait() : releases lock and goes to sleep().
+        notify() : wakes up one random thread.
+        notifyAll() : wakes up all threads 
+    both notify() and notifyAll() continues  executing it's synchronized block.
+
+    Executor framework : It is used for threead reuse and better performance.
+    Thread pool : Collection of reusable threads. benifits are - less memory consumption, better performance, Less thread creates overhead.
+
+    Runnable : No returns value (a method which runs run() method)
+    Callable : returns value (public Integer call())
+
+    volatile keyword : It ensures visibilty between threads.
+       volatile : visibilty between threads.
+       Synchronization : visibility + mutual exclusion.
+
+    Atomic class : is a way in java to perform thread-safe without synchronization.
+    
