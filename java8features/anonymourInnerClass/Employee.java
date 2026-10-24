@@ -5,7 +5,7 @@ public interface Employee {
     String getDesignation();
 
     /*
-         Here in Interface we have more than two interface,
+         Here in Interface we have more than two abstract method,
          to implement both these abstract method, I have to use anonymous inner class instead of Lambda Expression.
 
      */

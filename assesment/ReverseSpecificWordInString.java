@@ -1,8 +1,6 @@
 package assesment;
 
-import java.util.Arrays;
-
-public class Test {
+public class ReverseSpecificWordInString {
     public static void main(String[] args) {
         String abc="My Name is Vipin";
 
