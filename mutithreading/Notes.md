@@ -74,3 +74,33 @@ Important Notes
               1. It doesn't releases lock
               2. belongs to thread class
               3. It is used for pause
+
+
+
+#Terminologies
+  
+    Synchronization provides an implicit lock to threads on shared resources. (It can be unnecessarly that thread 1 sharing resouces  by locking it for so long then for thread 2 it would not be benificial. 
+    that's why we use Explicit lock( ReentrantLock)
+    Synchronization : The coordination of simultaneous processes, threads, 
+                      or tasks in an operating system so they execute in a predictable order and share system resources safely.
+                      Synchronization is done by locking shared resources.
+
+    Critical Section : A segment of code or part of a program where shared resources (such as global variables, memory, files, or databases) are accessed and modified.
+    
+    Race Condition : An undesirable flaw that occurs when multiple processes or threads access and modify shared data simultaneously, 
+                     and the final outcome depends on the unpredictable (non-deterministic) order of execution.
+ 
+    Mutual Exclusion : A concurrency control property which guarantees that if one process or thread is executing inside its critical section, 
+                       no other process or thread can enter or execute in its critical section for that same resource at the same time.
+
+
+Lock is an Interface. we can create its object by using its Implementation class ReentrantLock.
+
+    tryLock() : Aquires the lock if it is free within the given waiting time and the current thread has not been Interrupted.
+                If the lock is available this method returns immediately with the value true.
+                If the lock is not available then the current thread becomes disabled for thread schduling purposes and lies dormant until one of three things happens.
+                 - The lock aquire by the current thread.
+                 - Some other thread interrupts the current thread
+                 - The specified waiting time elapses.
+    unlock() : it released the lock after that specified time.
+    lock() : This applies on thread which is waiting for another thread to release the lock.
